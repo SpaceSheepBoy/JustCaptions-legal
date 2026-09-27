@@ -101,6 +101,7 @@
       <ul>
         <li>If you turn on Cloud Recognition, we receive the audio track of the videos you caption, the spoken language, and glossary terms, and pass them to the speech recognition provider for that request.</li>
         <li>If you use AI Correct or AI Translate, we receive the transcript text, nearby text context, glossary terms you entered, the selected target language for translation, and short-lived technical request metadata needed to provide and protect the feature.</li>
+        <li>If you have agreed to AI network use and choose the Emoji caption style, we receive the caption text shown on screen, a language hint, and the same short-lived request metadata.</li>
         <li>If you contact support, we receive the email address and details you choose to send.</li>
         <li>Apple may provide crash reports, diagnostics, purchase status, and App Store analytics according to your iOS and App Store settings.</li>
       </ul>
@@ -108,7 +109,8 @@
       <h2>Third-Party AI Providers and Sharing</h2>
       <p>For AI Correct and AI Translate, the text you choose to process is sent through the Just Captions AI backend to third-party AI providers. Today that provider path is OpenAI for the non-China service path and DeepSeek for the China service path. For service continuity, either provider may act as a backup for the other when the primary provider is unavailable, so text on the non-China path can reach DeepSeek and text on the China path can reach OpenAI. Each backup direction is used only when explicitly enabled.</p>
       <p>For Cloud Recognition, audio is sent to ElevenLabs as described above, with OpenAI or Groq as a backup.</p>
-      <p>We do not sell your audio or transcript text. We share them only with the providers needed to return the transcription, correction, or translation you requested.</p>
+      <p>For the Emoji caption style, once you have agreed to AI network use, caption text is sent through the same backend to Groq, or to OpenAI when Groq is unavailable, which returns one emoji per caption. Without that agreement, emojis are picked on your device, using Apple's on-device model where available.</p>
+      <p>We do not sell your audio or transcript text. We share them only with the providers needed to return the transcription, correction, translation, or emoji result you requested.</p>
 
       <h2>Storage and Retention</h2>
       <p>We do not intentionally store your source videos, audio, exported videos, or transcript text on our own servers after AI processing completes. On our backend, audio and transcript text are handled in transit to complete the request.</p>
