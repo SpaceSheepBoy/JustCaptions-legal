@@ -70,13 +70,18 @@
     <a class="back" href="../">Back to Just Captions</a>
     <article>
       <h1>Privacy Policy</h1>
-      <p class="date">Last updated July 29, 2026</p>
+      <p class="date">Last updated September 27, 2026</p>
 
       <p>Just Captions is designed for adding captions to videos on your device. The app does not require an account and does not include advertising or tracking SDKs.</p>
 
       <h2>Videos, Audio, and Captions</h2>
       <p>Videos you import, audio extracted for transcription, generated captions, project files, and exported videos are processed locally on your device for the core caption workflow.</p>
-      <p>We do not upload, inspect, store, or sell your source videos, audio, project files, or exported videos. Exports remain in the app, Photos, Files locations you choose, or apps you share them with.</p>
+      <p>We do not upload, inspect, store, or sell your source videos, project files, or exported videos. Audio leaves your device only if you turn on Cloud Recognition, described below. Exports remain in the app, Photos, Files locations you choose, or apps you share them with.</p>
+
+      <h2>Optional Cloud Recognition (Pro)</h2>
+      <p>Cloud Recognition is an optional Pro feature that transcribes speech in the cloud for more accurate captions. It does not start until you agree in the in-app prompt, which names the providers, and you can turn it off at any time in Settings. When it is off, speech recognition runs entirely on your device.</p>
+      <p>When it is on, the app extracts the audio track of the video you are captioning, compresses it, and sends it with the spoken language (when known) and any glossary terms you entered through the Just Captions AI backend to a third-party speech recognition provider, which returns the transcript and word timings. Today that provider is ElevenLabs, with OpenAI or Groq used as a backup when ElevenLabs is unavailable. Video frames are never sent. Cloud Recognition is not offered in mainland China.</p>
+      <p>We do not keep the audio on our servers after the request completes.</p>
 
       <h2>Optional AI Correct and AI Translate</h2>
       <p>AI Correct and AI Translate are optional internet features. They do not start until you confirm the in-app network prompt — which names the third-party AI service used and the data sent — and tap the Start AI button.</p>
@@ -94,6 +99,7 @@
 
       <h2>Information We May Receive</h2>
       <ul>
+        <li>If you turn on Cloud Recognition, we receive the audio track of the videos you caption, the spoken language, and glossary terms, and pass them to the speech recognition provider for that request.</li>
         <li>If you use AI Correct or AI Translate, we receive the transcript text, nearby text context, glossary terms you entered, the selected target language for translation, and short-lived technical request metadata needed to provide and protect the feature.</li>
         <li>If you contact support, we receive the email address and details you choose to send.</li>
         <li>Apple may provide crash reports, diagnostics, purchase status, and App Store analytics according to your iOS and App Store settings.</li>
@@ -101,10 +107,11 @@
 
       <h2>Third-Party AI Providers and Sharing</h2>
       <p>For AI Correct and AI Translate, the text you choose to process is sent through the Just Captions AI backend to third-party AI providers. Today that provider path is OpenAI for the non-China service path and DeepSeek for the China service path. For service continuity, either provider may act as a backup for the other when the primary provider is unavailable, so text on the non-China path can reach DeepSeek and text on the China path can reach OpenAI. Each backup direction is used only when explicitly enabled.</p>
-      <p>We do not sell your transcript text. We share it only with the AI providers needed to return the correction or translation result you requested.</p>
+      <p>For Cloud Recognition, audio is sent to ElevenLabs as described above, with OpenAI or Groq as a backup.</p>
+      <p>We do not sell your audio or transcript text. We share them only with the providers needed to return the transcription, correction, or translation you requested.</p>
 
       <h2>Storage and Retention</h2>
-      <p>We do not intentionally store your source videos, audio, exported videos, or transcript text on our own servers after AI processing completes. On our backend, transcript text is handled in transit to complete the request.</p>
+      <p>We do not intentionally store your source videos, audio, exported videos, or transcript text on our own servers after AI processing completes. On our backend, audio and transcript text are handled in transit to complete the request.</p>
       <p>We retain a short-lived anti-replay security nonce for about 6 minutes to protect the AI endpoint from abuse. Backend logs are intended to record operational events such as request counts, provider status, latency, and errors, not the transcript text itself.</p>
       <p>On your device, your videos, captions, projects, and exports remain until you delete them or remove the app.</p>
 
